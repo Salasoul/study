@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>snkrs animation</title>
+        <style>
+            #jump-man {
+                position: absolute;
+                width: 400px;
+                height: 400px;
+                background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585144015224&di=294b0818be64501ef24adf5463c91f88&imgtype=0&src=http%3A%2F%2Fimg.jk51.com%2Fimg_jk51%2F86619039.jpeg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 400px 400px;
+                -webkit-animation-name: jumpManScale;
+                -webkit-animation-timing-function: ease-in-out;
+                -webkit-animation-iteration-count: 1;
+                -webkit-animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes jumpManScale {
+                100% {
+                    transform: scale(0);
+                }
+            }
+
+            #swoosh {
+                position: absolute;
+                width: 400px;
+                height: 400px;
+                background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585143774385&di=601263c26a2b9744ffc24f3444e7afd0&imgtype=0&src=http%3A%2F%2Fi.ebayimg.com%2F00%2Fs%2FNDgxWDkyNA%3D%3D%2Fz%2FzDQAAOSwDuJW0rVb%2F%2524_1.JPG%3Fset_id%3D880000500F");
+                background-position: center;
+                background-repeat: no-repeat;
+                visibility: hidden;
+            }
+
+            .logo {
+                -webkit-animation-name: swooshScale;
+                -webkit-animation-timing-function: ease-in-out;
+                -webkit-animation-iteration-count: 1;
+                -webkit-animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes swooshScale {
+                100% {
+                    transform: scale(0.5);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="jump-man"></div>
+        <div id="swoosh"></div>
+
+        <script>
+            setTimeout(function() {
+                document.getElementById("swoosh").style.visibility = 'visible';
+                document.getElementById("swoosh").setAttribute("class","logo");
+            }, 2000);
+        </script>
+    </body>
+</html>
